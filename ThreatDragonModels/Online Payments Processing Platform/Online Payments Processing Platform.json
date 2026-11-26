@@ -1,5 +1,5 @@
 {
-  "version": "2.3.0",
+  "version": "2.6.2",
   "summary": {
     "title": "Online Payments Processing Platform",
     "owner": "David Lewis",
@@ -25,7 +25,7 @@
         "diagramType": "STRIDE",
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
-        "version": "2.3.0",
+        "version": "2.6.2",
         "cells": [
           {
             "position": {
@@ -50,7 +50,18 @@
               "name": "Customer /\nInternet",
               "description": "",
               "isTrustBoundary": true,
-              "hasOpenThreats": false
+              "hasOpenThreats": false,
+              "containedElements": [
+                "313655e5-4832-4424-b13c-7a3618543737"
+              ],
+              "crossingFlows": [
+                "bd50f8ec-ce5d-477d-84e9-f50d1ebe4bc4",
+                "bed188fc-babc-4061-a122-dd2270adf37d",
+                "f01e4de9-a79b-460d-84dc-9e929e14946d",
+                "48fa6630-5cd9-40e8-8f64-4cd134682065",
+                "93d0c80f-02f1-4260-b498-e99d2cd200a9",
+                "2ccf113d-6dfb-4dca-9f2c-1fcfa321decf"
+              ]
             }
           },
           {
@@ -76,7 +87,15 @@
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
-              "name": "Merchant / Web"
+              "name": "Merchant / Web",
+              "containedElements": [
+                "9a109a12-5616-4a78-b268-96e2cf68e9b3"
+              ],
+              "crossingFlows": [
+                "48fa6630-5cd9-40e8-8f64-4cd134682065",
+                "3c3b4416-5b07-4b94-b73d-52f38137d29b",
+                "bf0e4da4-150b-4f1a-b59d-3e82c7b03e91"
+              ]
             }
           },
           {
@@ -102,7 +121,17 @@
               "name": "Stripe /\nWeb",
               "description": "",
               "isTrustBoundary": true,
-              "hasOpenThreats": false
+              "hasOpenThreats": false,
+              "containedElements": [
+                "43b2bb57-8d50-479f-abf3-c9addd9aa295",
+                "91a72b16-b05b-463a-b0c6-62fa2dd0f72b"
+              ],
+              "crossingFlows": [
+                "93d0c80f-02f1-4260-b498-e99d2cd200a9",
+                "2ccf113d-6dfb-4dca-9f2c-1fcfa321decf",
+                "3c3b4416-5b07-4b94-b73d-52f38137d29b",
+                "bf0e4da4-150b-4f1a-b59d-3e82c7b03e91"
+              ]
             }
           },
           {
@@ -381,19 +410,30 @@
             "width": 200,
             "height": 100,
             "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "(1) Customer logs into\nthe merchant site",
+              "description": "OAuth",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "HTTPS",
+              "threats": [],
+              "trustBoundaryIds": [
+                "347f80ba-5755-47a5-9a1b-295fe75552b2"
+              ]
+            },
             "labels": [
               {
-                "markup": [
-                  {
-                    "tagName": "ellipse",
-                    "selector": "labelBody"
-                  },
-                  {
-                    "tagName": "text",
-                    "selector": "labelText"
-                  }
-                ],
                 "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  },
                   "labelText": {
                     "text": "(1) Customer logs into\nthe merchant site",
                     "textAnchor": "middle",
@@ -407,6 +447,16 @@
                     "strokeWidth": 0
                   }
                 },
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
                 "position": {
                   "distance": 0.5,
                   "args": {
@@ -416,20 +466,6 @@
                 }
               }
             ],
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "(1) Customer logs into\nthe merchant site",
-              "description": "OAuth",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "HTTPS",
-              "threats": []
-            },
             "id": "bd50f8ec-ce5d-477d-84e9-f50d1ebe4bc4",
             "source": {
               "cell": "a10e3c57-dad4-4914-b702-a43d9bf13956",
@@ -463,19 +499,30 @@
             "width": 200,
             "height": 100,
             "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "(2) Customer proceeds to payment page\nto make a purchase",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "HTTPS",
+              "threats": [],
+              "trustBoundaryIds": [
+                "347f80ba-5755-47a5-9a1b-295fe75552b2"
+              ]
+            },
             "labels": [
               {
-                "markup": [
-                  {
-                    "tagName": "ellipse",
-                    "selector": "labelBody"
-                  },
-                  {
-                    "tagName": "text",
-                    "selector": "labelText"
-                  }
-                ],
                 "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  },
                   "labelText": {
                     "text": "(2) Customer proceeds to payment page\nto make a purchase",
                     "textAnchor": "middle",
@@ -489,6 +536,16 @@
                     "strokeWidth": 0
                   }
                 },
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
                 "position": {
                   "distance": 0.5,
                   "args": {
@@ -498,20 +555,6 @@
                 }
               }
             ],
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "(2) Customer proceeds to payment page\nto make a purchase",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "HTTPS",
-              "threats": []
-            },
             "id": "bed188fc-babc-4061-a122-dd2270adf37d",
             "source": {
               "cell": "a10e3c57-dad4-4914-b702-a43d9bf13956",
@@ -545,19 +588,30 @@
             "width": 200,
             "height": 100,
             "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "(7) Customer provides card details\nand finalizes payment",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "347f80ba-5755-47a5-9a1b-295fe75552b2"
+              ]
+            },
             "labels": [
               {
-                "markup": [
-                  {
-                    "tagName": "ellipse",
-                    "selector": "labelBody"
-                  },
-                  {
-                    "tagName": "text",
-                    "selector": "labelText"
-                  }
-                ],
                 "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  },
                   "labelText": {
                     "text": "(7) Customer provides card details\nand finalizes payment",
                     "textAnchor": "middle",
@@ -571,6 +625,16 @@
                     "strokeWidth": 0
                   }
                 },
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
                 "position": {
                   "distance": 0.5,
                   "args": {
@@ -580,20 +644,6 @@
                 }
               }
             ],
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "(7) Customer provides card details\nand finalizes payment",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
             "id": "f01e4de9-a79b-460d-84dc-9e929e14946d",
             "source": {
               "cell": "a10e3c57-dad4-4914-b702-a43d9bf13956",
@@ -627,19 +677,31 @@
             "width": 200,
             "height": 100,
             "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "(3) Customer Client sends order intent\nincluding order amount\n(6) Return PaymentIntent to\nthe Customer Client",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "347f80ba-5755-47a5-9a1b-295fe75552b2",
+                "d50ff0be-15cd-4ddb-80b3-37e06d71fcf2"
+              ]
+            },
             "labels": [
               {
-                "markup": [
-                  {
-                    "tagName": "ellipse",
-                    "selector": "labelBody"
-                  },
-                  {
-                    "tagName": "text",
-                    "selector": "labelText"
-                  }
-                ],
                 "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  },
                   "labelText": {
                     "text": "(3) Customer Client sends order intent\nincluding order amount\n(6) Return PaymentIntent to\nthe Customer Client",
                     "textAnchor": "middle",
@@ -653,6 +715,16 @@
                     "strokeWidth": 0
                   }
                 },
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
                 "position": {
                   "distance": 0.5,
                   "args": {
@@ -662,20 +734,6 @@
                 }
               }
             ],
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "(3) Customer Client sends order intent\nincluding order amount\n(6) Return PaymentIntent to\nthe Customer Client",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": true,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
             "id": "48fa6630-5cd9-40e8-8f64-4cd134682065",
             "source": {
               "cell": "313655e5-4832-4424-b13c-7a3618543737",
@@ -713,19 +771,28 @@
             "width": 200,
             "height": 100,
             "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "(9) Attempt payment",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
             "labels": [
               {
-                "markup": [
-                  {
-                    "tagName": "ellipse",
-                    "selector": "labelBody"
-                  },
-                  {
-                    "tagName": "text",
-                    "selector": "labelText"
-                  }
-                ],
                 "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  },
                   "labelText": {
                     "text": "(9) Attempt payment",
                     "textAnchor": "middle",
@@ -739,6 +806,16 @@
                     "strokeWidth": 0
                   }
                 },
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
                 "position": {
                   "distance": 0.5,
                   "args": {
@@ -748,20 +825,6 @@
                 }
               }
             ],
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "(9) Attempt payment",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
             "id": "6e2c1f8e-4f6f-44a7-9303-549d9329dbb6",
             "source": {
               "cell": "43b2bb57-8d50-479f-abf3-c9addd9aa295",
@@ -795,19 +858,28 @@
             "width": 200,
             "height": 100,
             "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "(10) Payment Response",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
             "labels": [
               {
-                "markup": [
-                  {
-                    "tagName": "ellipse",
-                    "selector": "labelBody"
-                  },
-                  {
-                    "tagName": "text",
-                    "selector": "labelText"
-                  }
-                ],
                 "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  },
                   "labelText": {
                     "text": "(10) Payment Response",
                     "textAnchor": "middle",
@@ -821,6 +893,16 @@
                     "strokeWidth": 0
                   }
                 },
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
                 "position": {
                   "distance": 0.5,
                   "args": {
@@ -830,20 +912,6 @@
                 }
               }
             ],
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "(10) Payment Response",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
             "id": "9e576812-499d-407c-bf1e-114505d4bd77",
             "source": {
               "cell": "91a72b16-b05b-463a-b0c6-62fa2dd0f72b",
@@ -881,19 +949,31 @@
             "width": 200,
             "height": 100,
             "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "(11) Return the PaymentIntent\nwith status",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "347f80ba-5755-47a5-9a1b-295fe75552b2",
+                "4991548a-366e-4c45-87fc-487056f4379d"
+              ]
+            },
             "labels": [
               {
-                "markup": [
-                  {
-                    "tagName": "ellipse",
-                    "selector": "labelBody"
-                  },
-                  {
-                    "tagName": "text",
-                    "selector": "labelText"
-                  }
-                ],
                 "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  },
                   "labelText": {
                     "text": "(11) Return the PaymentIntent\nwith status",
                     "textAnchor": "middle",
@@ -907,6 +987,16 @@
                     "strokeWidth": 0
                   }
                 },
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
                 "position": {
                   "distance": 0.5,
                   "args": {
@@ -916,20 +1006,6 @@
                 }
               }
             ],
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "(11) Return the PaymentIntent\nwith status",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
             "id": "93d0c80f-02f1-4260-b498-e99d2cd200a9",
             "source": {
               "cell": "43b2bb57-8d50-479f-abf3-c9addd9aa295",
@@ -963,19 +1039,31 @@
             "width": 200,
             "height": 100,
             "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "(8) Customer Client send Stripe\ne.ConfirmCardPayment()",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "347f80ba-5755-47a5-9a1b-295fe75552b2",
+                "4991548a-366e-4c45-87fc-487056f4379d"
+              ]
+            },
             "labels": [
               {
-                "markup": [
-                  {
-                    "tagName": "ellipse",
-                    "selector": "labelBody"
-                  },
-                  {
-                    "tagName": "text",
-                    "selector": "labelText"
-                  }
-                ],
                 "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  },
                   "labelText": {
                     "text": "(8) Customer Client send Stripe\ne.ConfirmCardPayment()",
                     "textAnchor": "middle",
@@ -989,6 +1077,16 @@
                     "strokeWidth": 0
                   }
                 },
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
                 "position": {
                   "distance": 0.5,
                   "args": {
@@ -998,20 +1096,6 @@
                 }
               }
             ],
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "(8) Customer Client send Stripe\ne.ConfirmCardPayment()",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
             "id": "2ccf113d-6dfb-4dca-9f2c-1fcfa321decf",
             "source": {
               "cell": "313655e5-4832-4424-b13c-7a3618543737",
@@ -1055,19 +1139,31 @@
             "width": 200,
             "height": 100,
             "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "(5) Return PaymentIntent\nto the Merchant",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "d50ff0be-15cd-4ddb-80b3-37e06d71fcf2",
+                "4991548a-366e-4c45-87fc-487056f4379d"
+              ]
+            },
             "labels": [
               {
-                "markup": [
-                  {
-                    "tagName": "ellipse",
-                    "selector": "labelBody"
-                  },
-                  {
-                    "tagName": "text",
-                    "selector": "labelText"
-                  }
-                ],
                 "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  },
                   "labelText": {
                     "text": "(5) Return PaymentIntent\nto the Merchant",
                     "textAnchor": "middle",
@@ -1081,6 +1177,16 @@
                     "strokeWidth": 0
                   }
                 },
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
                 "position": {
                   "distance": 0.5,
                   "args": {
@@ -1090,20 +1196,6 @@
                 }
               }
             ],
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "(5) Return PaymentIntent\nto the Merchant",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
             "id": "3c3b4416-5b07-4b94-b73d-52f38137d29b",
             "source": {
               "cell": "43b2bb57-8d50-479f-abf3-c9addd9aa295",
@@ -1137,19 +1229,31 @@
             "width": 200,
             "height": 100,
             "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "(4) Merchant sends order information\ninc amount and currency",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "d50ff0be-15cd-4ddb-80b3-37e06d71fcf2",
+                "4991548a-366e-4c45-87fc-487056f4379d"
+              ]
+            },
             "labels": [
               {
-                "markup": [
-                  {
-                    "tagName": "ellipse",
-                    "selector": "labelBody"
-                  },
-                  {
-                    "tagName": "text",
-                    "selector": "labelText"
-                  }
-                ],
                 "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  },
                   "labelText": {
                     "text": "(4) Merchant sends order information\ninc amount and currency",
                     "textAnchor": "middle",
@@ -1163,6 +1267,16 @@
                     "strokeWidth": 0
                   }
                 },
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
                 "position": {
                   "distance": 0.5,
                   "args": {
@@ -1172,20 +1286,6 @@
                 }
               }
             ],
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "(4) Merchant sends order information\ninc amount and currency",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
             "id": "bf0e4da4-150b-4f1a-b59d-3e82c7b03e91",
             "source": {
               "cell": "9a109a12-5616-4a78-b268-96e2cf68e9b3",
